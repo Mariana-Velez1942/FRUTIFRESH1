@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrutiFresh - Pulpas de Frutas Naturales</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">🍊 FrutiFresh</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="floating-fruit">🥭</div>
+        <div class="floating-fruit">🫐</div>
+        <div class="floating-fruit">🥭</div>
+        
+        <div class="hero-content">
+            <h1>¡Frescura Natural que se Siente!</h1>
+            <p>Pulpas de frutas 100% naturales elaboradas con los más altos estándares de calidad. Maracuyá, mora y mango directo del campo a tu mesa.</p>
+            <button class="cta-button" onclick="scrollToSection('catalogo')">
+                Descubre Nuestros Sabores
+            </button>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section id="nosotros" class="mission-vision">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; color: var(--verde-principal); margin-bottom: 1rem;">Nuestra Esencia</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: var(--naranja-oscuro); max-width: 800px; margin: 0 auto;">Comprometidos con la calidad, la sostenibilidad y la salud de nuestros consumidores</p>
+            
+            <div class="mv-grid">
+                <div class="mv-card" onclick="animateCard(this)">
+                    <h3><i class="fas fa-bullseye"></i> Misión</h3>
+                    <p>Somos una empresa que elaboramos y comercializamos pulpas de frutas naturales y nutritivas, garantizando procesos de producción con altos estándares de calidad e inocuidad. Lo hacemos a través de prácticas sostenibles, apoyándonos en tecnología innovadora y en el trabajo conjunto con agricultores locales, colaboradores capacitados y aliados estratégicos. De esta manera, llevamos al consumidor un producto confiable, saludable y respetuoso con el medio ambiente.</p>
+                </div>
+                
+                <div class="mv-card" onclick="animateCard(this)">
+                    <h3><i class="fas fa-eye"></i> Visión</h3>
+                    <p>Deseamos consolidarnos como la empresa líder en producción y comercialización de pulpas de frutas en el mercado nacional e internacional. Lograremos a través de la innovación constante, el uso de tecnologías limpias, la construcción de relaciones sostenibles con agricultores, clientes y aliados estratégicos, que permiten un compromiso firme con la calidad, la salud de los consumidores y el cuidado del medio ambiente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog -->
+    <section id="catalogo" class="catalog">
+        <div class="container">
+            <h2>Nuestro Catálogo de Sabores</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">Pulpas 100% naturales, sin conservantes artificiales</p>
+            
+            <div class="products-grid">
+                <div class="product-card" onclick="showProductDetails('maracuya')">
+                    <div class="product-image">
+                        <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Sombra del vaso -->
+                            <ellipse cx="100" cy="210" rx="35" ry="8" fill="rgba(0,0,0,0.1)"/>
+                            
+                            <!-- Vaso principal estilo moderno -->
+                            <defs>
+                                <linearGradient id="vasoPrincipal1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:rgba(255,255,255,0.9)"/>
+                                    <stop offset="20%" style="stop-color:rgba(255,255,255,0.7)"/>
+                                    <stop offset="80%" style="stop-color:rgba(255,255,255,0.7)"/>
+                                    <stop offset="100%" style="stop-color:rgba(255,255,255,0.9)"/>
+                                </linearGradient>
+                                <linearGradient id="pulpaMaracuya" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ffc107"/>
+                                    <stop offset="50%" style="stop-color:#ff8c42"/>
+                                    <stop offset="100%" style="stop-color:#ff6b1a"/>
+                                </linearGradient>
+                            </defs>
+                            
+                            <!-- Vaso base (plástico transparente) -->
+                            <path d="M65 200 L135 200 L130 50 L70 50 Z" fill="url(#vasoPrincipal1)" stroke="rgba(200,200,200,0.5)" stroke-width="1"/>
+                            
+                            <!-- Pulpa de maracuyá -->
+                            <path d="M67 195 L133 195 L129 80 L71 80 Z" fill="url(#pulpaMaracuya)"/>
+                            
+                            <!-- Espuma/textura superior -->
+                            <ellipse cx="100" cy="82" rx="29" ry="4" fill="rgba(255,255,255,0.3)"/>
+                            
+                            <!-- Semillas características del maracuyá -->
+                            <circle cx="85" cy="140" r="1.5" fill="#333" opacity="0.8"/>
+                            <circle cx="105" cy="135" r="1.5" fill="#333" opacity="0.8"/>
+                            <circle cx="95" cy="155" r="1.5" fill="#333" opacity="0.8"/>
+                            <circle cx="115" cy="150" r="1.5" fill="#333" opacity="0.8"/>
+                            <circle cx="80" cy="170" r="1.5" fill="#333" opacity="0.8"/>
+                            <circle cx="110" cy="165" r="1.5" fill="#333" opacity="0.8"/>
+                            <circle cx="90" cy="180" r="1.5" fill="#333" opacity="0.8"/>
+                            <circle cx="120" cy="175" r="1.5" fill="#333" opacity="0.8"/>
+                            
+                            <!-- Reflejo del vaso (izquierdo) -->
+                            <path d="M70 55 L78 55 L76 190 L72 190 Z" fill="rgba(255,255,255,0.6)" opacity="0.8"/>
+                            
+                            <!-- Pajilla moderna -->
+                            <rect x="120" y="30" width="6" height="120" fill="#2d7a2d" rx="3"/>
+                            <rect x="118" y="25" width="6" height="15" fill="#2d7a2d" rx="3" transform="rotate(-25 121 32)"/>
+                            
+                            <!-- Logo FrutiFresh en el vaso -->
+                            <rect x="75" y="110" width="50" height="25" rx="12" fill="rgba(255,255,255,0.9)" stroke="#2d7a2d" stroke-width="1"/>
+                            
+                            <!-- Logo simplificado -->
+                            <g transform="translate(85, 118)">
+                                <!-- Vaso mini logo -->
+                                <path d="M5 2 L25 2 L23 8 L7 8 Z" fill="#ff8c42"/>
+                                <circle cx="15" cy="5" r="2" fill="#d32f2f"/>
+                                <rect x="20" y="0" width="1" height="6" fill="#2d7a2d"/>
+                                <text x="15" y="15" text-anchor="middle" font-family="Arial" font-size="6" font-weight="bold" fill="#2d7a2d">FrutiFresh</text>
+                            </g>
+                            
+                            <!-- Tapa del vaso -->
+                            <ellipse cx="100" cy="50" rx="32" ry="3" fill="rgba(255,255,255,0.9)" stroke="rgba(200,200,200,0.7)" stroke-width="1"/>
+                            
+                            <!-- Condensación/frescura -->
+                            <circle cx="75" cy="120" r="1" fill="rgba(255,255,255,0.7)"/>
+                            <circle cx="125" cy="130" r="1.5" fill="rgba(255,255,255,0.7)"/>
+                            <circle cx="80" cy="160" r="1" fill="rgba(255,255,255,0.7)"/>
+                            
+                            <!-- Etiqueta inferior -->
+                            <rect x="75" y="25" width="50" height="12" rx="6" fill="#2d7a2d"/>
+                            <text x="100" y="33" text-anchor="middle" font-family="Arial" font-size="8" font-weight="bold" fill="white">MARACUYÁ</text>
+                        </svg>
+                    </div>
+                    <div class="product-content">
+                        <h3>Pulpa de Maracuyá</h3>
+                        <p><strong>Sabor:</strong> Tropical y exótico con el equilibrio perfecto entre dulce y ácido</p>
+                        <p><strong>Beneficios:</strong> Rica en vitamina C, antioxidantes y fibra natural</p>
+                        <p><strong>Usos:</strong> Jugos, postres, helados, cócteles y smoothies</p>
+                        <p><strong>Presentación:</strong> Empaques de 500g y 1kg</p>
+                    </div>
+                </div>
+                
+                <div class="product-card" onclick="showProductDetails('mora')">
+                    <div class="product-image">
+                        <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Sombra del vaso -->
+                            <ellipse cx="100" cy="210" rx="35" ry="8" fill="rgba(0,0,0,0.1)"/>
+                            
+                            <!-- Vaso principal estilo moderno -->
+                            <defs>
+                                <linearGradient id="vasoPrincipal2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:rgba(255,255,255,0.9)"/>
+                                    <stop offset="20%" style="stop-color:rgba(255,255,255,0.7)"/>
+                                    <stop offset="80%" style="stop-color:rgba(255,255,255,0.7)"/>
+                                    <stop offset="100%" style="stop-color:rgba(255,255,255,0.9)"/>
+                                </linearGradient>
+                                <linearGradient id="pulpaMora" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#8e24aa"/>
+                                    <stop offset="50%" style="stop-color:#6a1b9a"/>
+                                    <stop offset="100%" style="stop-color:#4a148c"/>
+                                </linearGradient>
+                            </defs>
+                            
+                            <!-- Vaso base (plástico transparente) -->
+                            <path d="M65 200 L135 200 L130 50 L70 50 Z" fill="url(#vasoPrincipal2)" stroke="rgba(200,200,200,0.5)" stroke-width="1"/>
+                            
+                            <!-- Pulpa de mora -->
+                            <path d="M67 195 L133 195 L129 80 L71 80 Z" fill="url(#pulpaMora)"/>
+                            
+                            <!-- Espuma/textura superior -->
+                            <ellipse cx="100" cy="82" rx="29" ry="4" fill="rgba(255,255,255,0.3)"/>
+                            
+                            <!-- Textura granulada de la mora -->
+                            <circle cx="85" cy="140" r="2" fill="#2e003e" opacity="0.7"/>
+                            <circle cx="105" cy="135" r="2" fill="#2e003e" opacity="0.7"/>
+                            <circle cx="95" cy="155" r="2" fill="#2e003e" opacity="0.7"/>
+                            <circle cx="115" cy="150" r="2" fill="#2e003e" opacity="0.7"/>
+                            <circle cx="80" cy="170" r="2" fill="#2e003e" opacity="0.7"/>
+                            <circle cx="110" cy="165" r="2" fill="#2e003e" opacity="0.7"/>
+                            <circle cx="90" cy="180" r="2" fill="#2e003e" opacity="0.7"/>
+                            <circle cx="120" cy="175" r="2" fill="#2e003e" opacity="0.7"/>
+                            <circle cx="100" cy="120" r="1.5" fill="#2e003e" opacity="0.6"/>
+                            <circle cx="85" cy="110" r="1.5" fill="#2e003e" opacity="0.6"/>
+                            
+                            <!-- Reflejo del vaso (izquierdo) -->
+                            <path d="M70 55 L78 55 L76 190 L72 190 Z" fill="rgba(255,255,255,0.6)" opacity="0.8"/>
+                            
+                            <!-- Pajilla moderna -->
+                            <rect x="120" y="30" width="6" height="120" fill="#2d7a2d" rx="3"/>
+                            <rect x="118" y="25" width="6" height="15" fill="#2d7a2d" rx="3" transform="rotate(-25 121 32)"/>
+                            
+                            <!-- Logo FrutiFresh en el vaso -->
+                            <rect x="75" y="110" width="50" height="25" rx="12" fill="rgba(255,255,255,0.9)" stroke="#2d7a2d" stroke-width="1"/>
+                            
+                            <!-- Logo simplificado -->
+                            <g transform="translate(85, 118)">
+                                <!-- Vaso mini logo -->
+                                <path d="M5 2 L25 2 L23 8 L7 8 Z" fill="#ff8c42"/>
+                                <circle cx="15" cy="5" r="2" fill="#4a148c"/>
+                                <rect x="20" y="0" width="1" height="6" fill="#2d7a2d"/>
+                                <text x="15" y="15" text-anchor="middle" font-family="Arial" font-size="6" font-weight="bold" fill="#2d7a2d">FrutiFresh</text>
+                            </g>
+                            
+                            <!-- Tapa del vaso -->
+                            <ellipse cx="100" cy="50" rx="32" ry="3" fill="rgba(255,255,255,0.9)" stroke="rgba(200,200,200,0.7)" stroke-width="1"/>
+                            
+                            <!-- Condensación/frescura -->
+                            <circle cx="75" cy="120" r="1" fill="rgba(255,255,255,0.7)"/>
+                            <circle cx="125" cy="130" r="1.5" fill="rgba(255,255,255,0.7)"/>
+                            <circle cx="80" cy="160" r="1" fill="rgba(255,255,255,0.7)"/>
+                            
+                            <!-- Etiqueta inferior -->
+                            <rect x="75" y="25" width="50" height="12" rx="6" fill="#2d7a2d"/>
+                            <text x="100" y="33" text-anchor="middle" font-family="Arial" font-size="8" font-weight="bold" fill="white">MORA</text>
+                        </svg>
+                    </div>
+                    <div class="product-content">
+                        <h3>Pulpa de Mora</h3>
+                        <p><strong>Sabor:</strong> Dulce intenso con notas ligeramente ácidas</p>
+                        <p><strong>Beneficios:</strong> Antioxidantes naturales, vitaminas A y C</p>
+                        <p><strong>Usos:</strong> Mermeladas, jugos, tortas y productos de repostería</p>
+                        <p><strong>Presentación:</strong> Empaques de 500g y 1kg</p>
+                    </div>
+                </div>
+                
+                <div class="product-card" onclick="showProductDetails('mango')">
+                    <div class="product-image">
+                        <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Sombra del vaso -->
+                            <ellipse cx="100" cy="210" rx="35" ry="8" fill="rgba(0,0,0,0.1)"/>
+                            
+                            <!-- Vaso principal estilo moderno -->
+                            <defs>
+                                <linearGradient id="vasoPrincipal1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:rgba(255,255,255,0.9)"/>
+                                    <stop offset="20%" style="stop-color:rgba(255,255,255,0.7)"/>
+                                    <stop offset="80%" style="stop-color:rgba(255,255,255,0.7)"/>
+                                    <stop offset="100%" style="stop-color:rgba(255,255,255,0.9)"/>
+                                </linearGradient>
+                                <linearGradient id="pulpaMaracuya" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ffc107"/>
+                                    <stop offset="50%" style="stop-color:#ff8c42"/>
+                                    <stop offset="100%" style="stop-color:#ff6b1a"/>
+                                </linearGradient>
+                            </defs>
+                            
+                            <!-- Vaso base (plástico transparente) -->
+                            <path d="M65 200 L135 200 L130 50 L70 50 Z" fill="url(#vasoPrincipal1)" stroke="rgba(200,200,200,0.5)" stroke-width="1"/>
+                            
+                            <!-- Pulpa de maracuyá -->
+                            <path d="M67 195 L133 195 L129 80 L71 80 Z" fill="url(#pulpaMaracuya)"/>
+                            
+                            <!-- Espuma/textura superior -->
+                            <ellipse cx="100" cy="82" rx="29" ry="4" fill="rgba(255,255,255,0.3)"/>
+                            
+                            <!-- Semillas características del maracuyá -->
+                            <circle cx="85" cy="140" r="1.5" fill="#333" opacity="0.8"/>
+                            <circle cx="105" cy="135" r="1.5" fill="#333" opacity="0.8"/>
+                            <circle cx="95" cy="155" r="1.5" fill="#333" opacity="0.8"/>
+                            <circle cx="115" cy="150" r="1.5" fill="#333" opacity="0.8"/>
+                            <circle cx="80" cy="170" r="1.5" fill="#333" opacity="0.8"/>
+                            <circle cx="110" cy="165" r="1.5" fill="#333" opacity="0.8"/>
+                            <circle cx="90" cy="180" r="1.5" fill="#333" opacity="0.8"/>
+                            <circle cx="120" cy="175" r="1.5" fill="#333" opacity="0.8"/>
+                            
+                            <!-- Reflejo del vaso (izquierdo) -->
+                            <path d="M70 55 L78 55 L76 190 L72 190 Z" fill="rgba(255,255,255,0.6)" opacity="0.8"/>
+                            
+                            <!-- Pajilla moderna -->
+                            <rect x="120" y="30" width="6" height="120" fill="#2d7a2d" rx="3"/>
+                            <rect x="118" y="25" width="6" height="15" fill="#2d7a2d" rx="3" transform="rotate(-25 121 32)"/>
+                            
+                            <!-- Logo FrutiFresh en el vaso -->
+                            <rect x="75" y="110" width="50" height="25" rx="12" fill="rgba(255,255,255,0.9)" stroke="#2d7a2d" stroke-width="1"/>
+                            
+                            <!-- Logo simplificado -->
+                            <g transform="translate(85, 118)">
+                                <!-- Vaso mini logo -->
+                                <path d="M5 2 L25 2 L23 8 L7 8 Z" fill="#ff8c42"/>
+                                <circle cx="15" cy="5" r="2" fill="#d32f2f"/>
+                                <rect x="20" y="0" width="1" height="6" fill="#2d7a2d"/>
+                                <text x="15" y="15" text-anchor="middle" font-family="Arial" font-size="6" font-weight="bold" fill="#2d7a2d">FrutiFresh</text>
+                            </g>
+                            
+                            <!-- Tapa del vaso -->
+                            <ellipse cx="100" cy="50" rx="32" ry="3" fill="rgba(255,255,255,0.9)" stroke="rgba(200,200,200,0.7)" stroke-width="1"/>
+                            
+                            <!-- Condensación/frescura -->
+                            <circle cx="75" cy="120" r="1" fill="rgba(255,255,255,0.7)"/>
+                            <circle cx="125" cy="130" r="1.5" fill="rgba(255,255,255,0.7)"/>
+                            <circle cx="80" cy="160" r="1" fill="rgba(255,255,255,0.7)"/>
+                            
+                            <!-- Etiqueta inferior -->
+                            <rect x="75" y="25" width="50" height="12" rx="6" fill="#2d7a2d"/>
+                            <text x="100" y="33" text-anchor="middle" font-family="Arial" font-size="8" font-weight="bold" fill="white">MANGO</text>
+                        </svg>
+                    </div>
+                    <div class="product-content">
+                        <h3>Pulpa de Mango</h3>
+                        <p><strong>Sabor:</strong> Dulce tropical con textura cremosa y aromática</p>
+                        <p><strong>Beneficios:</strong> Vitamina A, C, fibra y betacarotenos</p>
+                        <p><strong>Usos:</strong> Batidos, helados, lassi, salsas agridulces</p>
+                        <p><strong>Presentación:</strong> Empaques de 500g y 1kg</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2>¡Contáctanos!</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem; color: var(--verde-principal);">Estamos aquí para atenderte y resolver todas tus dudas</p>
+            
+            <div class="form-container">
+                <form id="contactForm" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="empresa">Empresa/Organización</label>
+                        <input type="text" id="empresa" name="empresa">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="producto">Producto de Interés</label>
+                        <select id="producto" name="producto" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 10px;">
+                            <option value="">Selecciona un producto</option>
+                            <option value="maracuya">Pulpa de Maracuyá</option>
+                            <option value="mora">Pulpa de Mora</option>
+                            <option value="mango">Pulpa de Mango</option>
+                            <option value="todos">Todos los productos</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                    </button>
+                    
+                    <div id="successMessage" class="success-message">
+                        <i class="fas fa-check-circle"></i> ¡Gracias por contactarnos! Te responderemos pronto.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" onclick="openSocial('facebook')"><i class="fab fa-facebook"></i></a>
+                <a href="#" onclick="openSocial('instagram')"><i class="fab fa-instagram"></i></a>
+                <a href="#" onclick="openSocial('whatsapp')"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" onclick="openSocial('linkedin')"><i class="fab fa-linkedin"></i></a>
+                <a href="#" onclick="openSocial('youtube')"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <div style="margin-bottom: 2rem;">
+                <h3 style="color: var(--amarillo); margin-bottom: 1rem;">FrutiFresh</h3>
+                <p>📧 info@frutifresh.com | 📞 +57 302 261 1383</p>
+                <p>📍 Medellín, Antioquia, Colombia</p>
+            </div>
+            
+            <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem;">
+                <p>&copy; 2025 FrutiFresh. Todos los derechos reservados.</p>
+                <p style="font-size: 0.9rem; opacity: 0.8;">Frescura natural que se siente 🍊</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
